@@ -1,0 +1,28 @@
+# Configuración de Nvim como IDE de programación
+## Pluggins Instalados
+- alpha
+- autopairs
+- autosave
+- bufferline
+- catppuccin
+- closetag
+- cmp
+- colorizer
+- completions
+- conform
+- dispatch
+- emmet
+- fugitve
+- fit-stuff
+- indent-line
+- lint
+- live-server
+- lualine
+- markdown
+- neo-tree
+- none-ls
+- nvim-lspconfig
+- oil
+- telescope
+- treesitter
+- which-key
