@@ -6,4 +6,4 @@ vim.cmd("set relativenumber")
 vim.cmd("set cursorline")
 vim.cmd("set hidden")
 vim.cmd("set wildmenu")
-vim.g.mapleader =" "
+vim.g.mapleader = " "

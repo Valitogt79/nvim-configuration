@@ -1,12 +1,37 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
   build = ":TSUpdate",
-  config = function()
-    local  config = require("nvim-treesitter.configs")
-    config.setup({
-      ensure_installed = {"lua", "javascript", "html", "css", "typescript", "markdown"},
-      highlight = { enable = true },
-      ident = { enable = true },
-    })
-  end
- }
+  main = "nvim-treesitter.configs",
+  opts = {
+    ensure_installed = {
+      "lua",
+      "javascript",
+      "html",
+      "css",
+      "typescript",
+    },
+    highlight = {
+      enable = true,
+    },
+    indent = {
+      enable = true,
+    },
+    textobjects = {
+      select = {
+        enable = true,
+        lookahead = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["ac"] = "@conditional.outer",
+          ["ic"] = "@conditional.inner",
+          ["al"] = "@loop.outer",
+          ["il"] = "loop.inner",
+        },
+      },
+    },
+  },
+}
